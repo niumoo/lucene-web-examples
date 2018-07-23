@@ -1,20 +1,14 @@
-package net.codingme.lucene.web.tika;
+package net.codingme.lucene.web.utils.tika;
 
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
-import org.apache.tika.parser.asm.ClassParser;
-import org.apache.tika.parser.html.HtmlParser;
-import org.apache.tika.parser.microsoft.ooxml.OOXMLParser;
 import org.apache.tika.parser.pdf.PDFParser;
-import org.apache.tika.parser.txt.TXTParser;
-import org.apache.tika.parser.xml.XMLParser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**

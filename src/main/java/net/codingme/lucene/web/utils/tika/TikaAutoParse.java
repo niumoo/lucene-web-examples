@@ -1,4 +1,4 @@
-package net.codingme.lucene.web.tika;
+package net.codingme.lucene.web.utils.tika;
 
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;

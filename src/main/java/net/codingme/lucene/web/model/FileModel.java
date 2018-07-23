@@ -11,6 +11,8 @@ public class FileModel {
     private String title;
     // 文件内容
     private String content;
+    // 文件摘要
+    private String summary;
 
     public String getTitle() {
         return title;
@@ -28,10 +30,25 @@ public class FileModel {
         this.content = content;
     }
 
-    FileModel(String title, String content) {
+    public FileModel() {
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public FileModel(String title, String content) {
         this.title = title;
         this.content = content;
     }
 
-
+    public FileModel(String title, String content, String summary) {
+        this.title = title;
+        this.content = content;
+        this.summary = summary;
+    }
 }
