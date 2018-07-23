@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" >
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>lucene文件检索</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
-<p th:text="${username}"></p>
-
+<div class="indexbox">
+    <div class="logo">
+        <a href="index.jsp">
+            <img alt="文件检索" src="/static/images/logo.png">
+        </a>
+    </div>
+    <div class="searchform">
+        <form action="/search/list" method="get">
+            <input type="text" name="keyword"> <input type="submit" value="搜索">
+        </form>
+    </div>
+    <div class="info">
+        <p>基于Lucene的文件检索系统</p>
+        <br/>
+        <p> <span th:text="${#dates.format(new java.util.Date().getTime(),'yyyy')}"></span>
+            扣钉博客 All rights Reserved</p>
+    </div>
+</div>
 </body>
 </html>
