@@ -19,8 +19,8 @@ import java.nio.file.Paths;
 
 /**
  * <p>
- * Lucene工具类
- * 创建索引
+ * Lucene工具类 - 创建索引
+ *
  *
  * @Author niujinpeng
  * @Date 2018/7/22 11:22

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>lucene文件检索</title>
     <link type="text/css" rel="stylesheet" href="/static/css/index.css">
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 </head>
 <body>
 <div class="indexbox">
@@ -17,12 +19,27 @@
             <input type="text" name="keyword"> <input type="submit" value="搜索">
         </form>
     </div>
-    <div class="info">
+    <div class="info" id="vmFooter">
         <p>基于Lucene的文件检索系统</p>
         <br/>
-        <p> <span th:text="${#dates.format(new java.util.Date().getTime(),'yyyy')}"></span>
+        <p><span>{{nowTime}}</span>
             扣钉博客 All rights Reserved</p>
     </div>
 </div>
 </body>
+<script>
+    var vmMain = new Vue({
+        el: '#vmMaim',
+        data: {
+            nowTime: new Date().toLocaleString()
+        }
+    })
+
+    var vmFooter = new Vue({
+        el: '#vmFooter',
+        data: {
+            nowTime: new Date().toLocaleString()
+        }
+    })
+</script>
 </html>
