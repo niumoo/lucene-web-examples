@@ -14,19 +14,15 @@
     <title>搜索结果</title>
 
     <link type="text/css" rel="stylesheet" href="/static/css/result.css">
-    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
-    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
-    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
 </head>
 <body>
 <div class="searchbox">
     <div class="logo">
-        <a href="index.jsp"><img alt="文件检索" src="/static/images/logo.png"></a>
+        <a href="/"><img alt="文件检索" src="/static/images/logo.png"></a>
     </div>
     <div class="searchform">
-        <form action="SearchFile" method="get">
-            <input type="text" name="query" value=""> <input
-                type="submit" value="搜索">
+        <form action="/search/list" method="get">
+            <input type="text" name="keyword" value=""> <input type="submit" value="搜索">
         </form>
     </div>
 </div>
@@ -39,7 +35,7 @@
         <c:forEach items="${fileModelList }" var="fileModel">
             <div class="itemtop" v-for="fileModel in view">
                 <h4>
-                    <img alt="pdf" th:src="/static/images/${fileModel.fileType}.png"> class="doclogo">
+                    <img alt="pdf" src="/static/images/${fileModel.fileType}.png" class="doclogo" >
                    ${fileModel.title}
                 </h4>
                 <h3>
